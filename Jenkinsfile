@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('terraform init'){
             steps{
-                sudo sh "terraform init"
+                sh "./terraform init"
             }
         }
     }
