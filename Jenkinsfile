@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('terraform init'){
             steps{
-                sh "echo $PATH|terraform init"
+                sh "terraform version"
             }
         }
     }
