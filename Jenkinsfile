@@ -7,7 +7,11 @@ pipeline{
     stages{
         stage('terraform init'){
             steps{
-                sh "terraform-12 version"
+             script{    
+                def tfHome = tool name: 'terraform-12'
+                env.PATH = "${tfHome}:${env.PATH}"
+             }
+                sh "terraform version"
             }
         }
     }
